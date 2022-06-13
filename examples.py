@@ -297,3 +297,137 @@ ctx.show_text('III')
 
 #create PNG file
 surface.write_to_png('WEHRMACHT_ex.png')
+
+
+### PanzerJager Example
+
+WIDTH, HEIGHT = 256, 256
+surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, WIDTH, HEIGHT)
+ctx = cairo.Context(surface)
+ctx.scale(WIDTH, HEIGHT)  # Normalizing the canvas
+ctx.rectangle(0, 0, WIDTH, HEIGHT)
+ctx.set_source_rgb(0.302, 0.3647, 0.3255)
+ctx.fill()
+
+#draw NATO icon
+ctx.rectangle(2/9, 3/9, 5/9, 3/9)
+ctx.set_source_rgb(1.0, 1.0, 1.0)  # Solid color
+ctx.set_line_width(0.03)
+ctx.set_line_join(cairo.LINE_JOIN_ROUND)
+ctx.stroke()
+
+ctx.set_source_rgb(1.0, 1.0, 1.0)
+ctx.set_line_width(0.03)
+ctx.move_to(10/27, 4/9)
+ctx.line_to(17/27, 4/9)
+ctx.stroke()
+
+ctx.set_source_rgb(1.0, 1.0, 1.0)
+ctx.set_line_width(0.03)
+ctx.move_to(10/27, 5/9)
+ctx.line_to(17/27, 5/9)
+ctx.stroke()
+
+ctx.arc(10/27, 1/2, 1/18, math.pi/2, -math.pi/2)
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_line_width(0.03)
+ctx.stroke()
+
+ctx.arc(17/27, 1/2, 1/18, -math.pi/2, math.pi/2)
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_line_width(0.03)
+ctx.stroke()
+
+ctx.set_source_rgb(1.0, 1.0, 1.0)
+ctx.set_line_width(0.03)
+ctx.move_to(2/9, 6/9)
+ctx.line_to(1/2, 3/9)
+ctx.stroke()
+
+ctx.set_source_rgb(1.0, 1.0, 1.0)
+ctx.set_line_width(0.03)
+ctx.move_to(7/9, 6/9)
+ctx.line_to(1/2, 3/9)
+ctx.stroke()
+
+# Draw number of unit
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_font_size(4/27)
+ctx.select_font_face("Times New Roman",
+                     cairo.FONT_SLANT_NORMAL,
+                     cairo.FONT_WEIGHT_BOLD)
+ctx.move_to(2/27, 5/27)
+ctx.show_text("653 PjA")
+
+#Draw paramteres of unit
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_font_size(5/27)
+ctx.select_font_face("Times New Roman",
+                     cairo.FONT_SLANT_NORMAL,
+                     cairo.FONT_WEIGHT_BOLD)
+ctx.move_to(11/54, 24/27)
+ctx.show_text("2 - 1 - 7")
+
+#Draw size of unit
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_font_size(3/27)
+ctx.select_font_face("Times New Roman",
+                     cairo.FONT_SLANT_NORMAL,
+                     cairo.FONT_WEIGHT_BOLD)
+ctx.move_to(1/27, 5/9)
+ctx.show_text('II')
+
+#create PNG file
+surface.write_to_png('MARDER_ex.png')
+
+### Flak Example
+
+WIDTH, HEIGHT = 256, 256
+surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, WIDTH, HEIGHT)
+ctx = cairo.Context(surface)
+ctx.scale(WIDTH, HEIGHT)  # Normalizing the canvas
+ctx.rectangle(0, 0, WIDTH, HEIGHT)
+ctx.set_source_rgb(0.302, 0.3647, 0.3255)
+ctx.fill()
+
+#draw NATO icon
+ctx.rectangle(2/9, 3/9, 5/9, 3/9)
+ctx.set_source_rgb(1.0, 1.0, 1.0)  # Solid color
+ctx.set_line_width(0.03)
+ctx.set_line_join(cairo.LINE_JOIN_ROUND)
+ctx.stroke()
+
+ctx.set_source_rgb(1.0, 1.0, 1.0)
+ctx.set_line_width(0.03)
+ctx.curve_to(2/9, 6/9, 1/2, 1/2, 7/9, 6/9)
+ctx.stroke()
+
+# Draw number of unit
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_font_size(4/27)
+ctx.select_font_face("Times New Roman",
+                     cairo.FONT_SLANT_NORMAL,
+                     cairo.FONT_WEIGHT_BOLD)
+ctx.move_to(2/27, 5/27)
+ctx.show_text("11 Flak")
+
+#Draw paramteres of unit
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_font_size(5/27)
+ctx.select_font_face("Times New Roman",
+                     cairo.FONT_SLANT_NORMAL,
+                     cairo.FONT_WEIGHT_BOLD)
+ctx.move_to(11/54, 24/27)
+ctx.show_text("0 - 2 - 3")
+
+#Draw size of unit
+ctx.set_source_rgb(1, 1, 1)
+ctx.set_font_size(3/27)
+ctx.select_font_face("Times New Roman",
+                     cairo.FONT_SLANT_NORMAL,
+                     cairo.FONT_WEIGHT_BOLD)
+ctx.move_to(1/27, 5/9)
+ctx.show_text('II')
+
+#create PNG file
+surface.write_to_png('FLAK_ex.png')
